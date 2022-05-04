@@ -6,9 +6,11 @@ import RecetasProvider from "./components/context/RecetasContext";
 import { ListaRecetas } from "./components/ListaRecetas";
 import { ModalProvider } from "./components/context/ModalContext";
 
+
 function App() {
   return (
-    <CategoriasProvider>
+
+     <CategoriasProvider>
       <RecetasProvider>
         <ModalProvider>
       <div>
@@ -23,7 +25,7 @@ function App() {
       </div>
       </ModalProvider>
       </RecetasProvider>
-    </CategoriasProvider>
+    </CategoriasProvider> 
   );
 }
 

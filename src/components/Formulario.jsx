@@ -14,7 +14,7 @@ export const Formulario = () => {
   })
 
   const handleInputChange =(e)=>{
-    console.log(input)
+
    setInput({
      ...input,
      [e.target.name] : e.target.value
