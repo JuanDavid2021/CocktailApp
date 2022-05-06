@@ -35,10 +35,10 @@ const RecetasProvider =(props)=>{
                   var resultFinal = resultCategoria.filter(c=>c.strDrink.includes(nameCocktail))
                   if(resultFinal.length>0){
                      setRecetas(resultFinal)
-                     setConsultar(false)
+                     
                   }else{
                      setRecetas(null)
-                     setConsultar(false)
+                     
                   }
                }
             }
@@ -47,7 +47,7 @@ const RecetasProvider =(props)=>{
 
          else if(!nombre && !categoria){
             setRecetas("error")
-            setConsultar(false)}
+           }
 
          else if(nombre.length>0 && categoria.length<1){
 
@@ -60,10 +60,10 @@ const RecetasProvider =(props)=>{
                const recetasCategoria = await axios.get(urlName)
                if(recetasCategoria.data.drinks!==null){
                   setRecetas(recetasCategoria.data.drinks)
-                  setConsultar(false)
+                  
                }else{
                   setRecetas(null)
-                  setConsultar(false)
+                  
                }
             }
             obtenerRecetas()    
@@ -77,10 +77,10 @@ const RecetasProvider =(props)=>{
                const recetasCategoria = await axios.get(urlCategoria)
                if(recetasCategoria.data.drinks.length>1){
                   setRecetas(recetasCategoria.data.drinks)
-                  setConsultar(false)
+                  
                }else{
                   setRecetas(null)
-                  setConsultar(false)
+                  
                }
             }
             obtenerRecetas()   
