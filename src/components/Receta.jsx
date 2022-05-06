@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react'
 import { ModalContext } from './context/ModalContext'
-
+import "./Receta.css"
 
 
 
@@ -9,7 +9,7 @@ export const Receta = ({receta}) => {
 
 
 const {instrucciones,setInstrucciones, setIdReceta} = useContext(ModalContext)
-console.log(instrucciones)
+
 const busq = (e)=>{
 e.preventDefault()
 setIdReceta(receta.idDrink)
@@ -30,15 +30,15 @@ let arrayIngredients = []
 }
 
 return (
-<div className='col-md-4 bt-3'>
+<div className='col-md-4 bt-3 mb-3'>
   <div className='card'>
-      <h2 className='card-header'>{receta.strDrink}</h2>
+      <h2 className='card-header text-center'>{receta.strDrink}</h2>
       <img src={receta.strDrinkThumb} className='card-img-top'></img> 
   </div>
 
  
 <button type="submit" 
-  className="btn btn-primary" 
+  className="btn btn-block btn-dark boton" 
   data-bs-toggle="modal" 
   data-bs-target="#exampleModal"
   onClick={busq}
@@ -49,7 +49,7 @@ return (
 
 <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog">
-    <div className="modal-content">
+    <div className="modal-content bg-dark text-light">
       <div className="modal-header">
         <h5 className="modal-title text-center" id="exampleModalLabel">{instrucciones.strDrink}</h5>
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

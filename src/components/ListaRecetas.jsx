@@ -9,11 +9,8 @@ export const ListaRecetas = () => {
 
   return (
     <div className='row'>
-{/*        {recetas?.map(r=>(
-           <Receta key={r.idDrink } receta={r}/>
-       ))} */}
-    { recetas===null? <h1>No se encontraron resultados de la búsqueda</h1> : recetas ==="error"? <h1 className='text-center'>Por favor ingrese una busqueda por ingrediente y/o categoría</h1>
-    :  recetas?.map(r=>(
+    { recetas===null? <h1>No se encontraron resultados de la búsqueda</h1> : recetas ==="error"? <h1 className='text-center'>Por favor ingrese una busqueda por nombre y/o categoría</h1>
+    : recetas?.map(r=>(
       <Receta key={r.idDrink } receta={r}/>
   ))}
     </div>

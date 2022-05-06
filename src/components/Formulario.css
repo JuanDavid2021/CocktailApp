@@ -1,0 +1,16 @@
+.fondo{
+    margin: 0;;
+    padding-top: 100px;
+}
+
+.fondo2{
+    height:80vh;
+    width:100%;
+    margin: 0;
+    padding-top: 100px; 
+    padding-right: 0;
+}
+
+.searchbar{
+    margin-left:150px;
+}

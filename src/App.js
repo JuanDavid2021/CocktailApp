@@ -5,7 +5,7 @@ import CategoriasProvider from "./components/context/CategoriasContext";
 import RecetasProvider from "./components/context/RecetasContext";
 import { ListaRecetas } from "./components/ListaRecetas";
 import { ModalProvider } from "./components/context/ModalContext";
-
+import "./Bootstrap.min.css"
 
 function App() {
   return (
@@ -13,19 +13,22 @@ function App() {
      <CategoriasProvider>
       <RecetasProvider>
         <ModalProvider>
+          
       <div>
         <Header/>
       </div>
 
-      <div className="container mt-5">
-        <div className="row">
+     
+        <div className="row m-0">
             <Formulario/>
+            <ListaRecetas/>
         </div> 
-          <ListaRecetas/>
-      </div>
+
+ 
       </ModalProvider>
       </RecetasProvider>
     </CategoriasProvider> 
+
   );
 }
 
